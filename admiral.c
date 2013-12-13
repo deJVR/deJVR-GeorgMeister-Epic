@@ -267,5 +267,10 @@ int main(){
 	
 	t=clock()-t;
 	printf("resoures: %d (%f secs)\n",t,((float)t)/CLOCKS_PER_SEC);
-	return 0;
+	
+	if(score == 86)
+		return 0;
+	else
+		return 1;
+	
 }
