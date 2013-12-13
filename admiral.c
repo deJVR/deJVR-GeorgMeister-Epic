@@ -72,7 +72,7 @@ void allocatePaths()
 		
 		paths[i]=paths[0] + i * size;
 	}
-
+	
 	
 	printf("paths allocated\n");
 }
@@ -207,7 +207,7 @@ int goForIt()
 	
 	mincost=100000000; //make better
 	
-	for(i=1;i<=10000000;i++) {
+	for(i=1;i<=1000000;i++) {
 		
 		ship1=1;
 		ship2=1;
