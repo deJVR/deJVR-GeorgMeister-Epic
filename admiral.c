@@ -10,6 +10,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <time.h>
+
 
 #define Random() ((double)rand()/(double)RAND_MAX)
 #define min(a,b) ((a<b) ? a : b)
@@ -251,7 +254,13 @@ int goForIt()
 
 
 int main(){
+	
+	int t=clock();
+	
 	setData();
 	printf("Total cost = %d\n", goForIt());
+	
+	t=clock()-t;
+	printf("resoures: %d (%f secs)\n",t,((float)t)/CLOCKS_PER_SEC);
 	return 0;
 }
