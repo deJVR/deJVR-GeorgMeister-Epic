@@ -207,7 +207,7 @@ int goForIt()
 	
 	mincost=100000000; //make better
 	
-	for(i=1;i<=1000000;i++) {
+	for(i=1;i<=500000;i++) {
 		
 		ship1=1;
 		ship2=1;
@@ -215,7 +215,7 @@ int goForIt()
 		
 		resetValid();
 		
-		for(step=1;step<=nnodes;step++) {
+		for(step=1;step<=nnodes && cost<mincost;step++) {
 			
 			if(ship1!=nnodes && ship1!=-1) {
 				
@@ -256,9 +256,14 @@ int goForIt()
 int main(){
 	
 	int t=clock();
+	int score;
+	
 	
 	setData();
-	printf("Total cost = %d\n", goForIt());
+	
+	score = goForIt();
+
+	printf("Total cost = %d\n", score);
 	
 	t=clock()-t;
 	printf("resoures: %d (%f secs)\n",t,((float)t)/CLOCKS_PER_SEC);
